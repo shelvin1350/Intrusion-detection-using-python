@@ -1,0 +1,133 @@
+
+
+{% extends 'head_tail.html' %}
+
+{% block Registration %}
+
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="\static\Registration_template\css\material-design-iconic-font.min.css">
+	
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="\static\Registration_template\css\style.css">
+	
+	</head>
+
+	<script>
+     function checkvalid(form){
+		 debugger;
+		 p1=form.pswd.value;
+		 p2=form.cpswd.value;
+
+		 if(p1==p2)
+
+		 	alert("Registration Successfull\n Please login for exporing our services with ur Email id and password")
+
+	 }
+
+	</script>
+
+	<script>
+     function checkvalid(form){
+		 debugger;
+		 p1=form.pswd.value;
+		 p2=form.cpswd.value;
+
+		 if(p1==p2)
+
+		 	alert("Registration Successfull\n Please login for exporing our services with ur Email id and password")
+
+	 }
+
+	</script>
+	
+	<body>
+
+ <!--<div style="width: 100%;height: 650px;background-color: green">
+<center>
+     <br><div style="width: 85%;height: 250px;background-color: green">-->
+         <center>    
+			
+		<!-- <div class="wrapper" style="width:97%;height:650px;background-image: url(\\static\\Registration_template\\images\\yyi.jpg);float:center;background-position:center;background-repeat:no-repeat;"> -->
+		
+			<div class="inner" style="background-color: rgb(255, 255, 255);">
+				
+				<form method="POST" onSubmit="return checkvalid(this)" >
+				  
+				  {% csrf_token %}
+
+					<h3>Registration Form</h3>
+
+
+					<div class="form-group" style="float:center;">
+						
+						<div class="form-wrapper">
+							<label for="">First Name</label>
+							<input type="text" class="form-control" name="fn" required>
+						</div>
+						
+						<div class="form-wrapper">
+							<label for="">Last Name</label>
+							<input type="text" class="form-control" name="ln" required>
+						</div>
+					</div>
+
+
+					<div class="form-wrapper">
+						<label for="">Email</label>
+						<input type="Email" class="form-control" name="e1" required>
+					</div>
+
+					<div class="form-wrapper">
+						<label for="">Password</label>
+						<input type="password" class="form-control" name="pswd" required>
+					</div>
+
+					<div class="form-wrapper">
+						<label for="">Confirm Password</label>
+						<input type="password" required class="form-control" name="cpswd" required>
+					</div>
+					<div class="form-wrapper">
+						<label for="" style="color:red;">{{data}}</label>
+					
+					</div>
+					<div  class="form-wrapper">
+						<label>
+						
+							<input type="checkbox" id="c1" > I accept the Terms of Use & Privacy Policy.
+							<span class="checkmark"></span>
+						</label>
+					</div>
+						<script src="/static/Registration_template/jquery-3.4.1.js"></script>
+					<script>
+					debugger;
+					   $("#b1").attr('disabled', true);
+					$("#c1").click(function(){
+   $("#b1").attr('disabled', false);
+					})
+					</script>
+					<button id="b1" >Register Now</button>
+				</form>
+			</div>
+		</div>
+
+		</center>
+
+<!-- </div>   -->
+
+<br>
+	</body>
+</html>
+
+
+{% endblock %}
+
+

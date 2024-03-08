@@ -1,0 +1,143 @@
+
+
+{% extends 'head2_tail2.html' %}
+
+{% block msg_reply %}
+
+<html>
+
+<script>
+     function checkvalid(form){
+		 debugger;
+		 
+         	alert("Your Reply Send Succesfully.!")
+
+	 }
+
+	</script>
+<!-- 
+<body>
+
+<div class="se-pre-con"></div>
+
+<div style="width:100%;margin:(0px,0px);padding:0px; height:1000px;background-image: url(\\static\\bg1.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;"> -->
+
+<br><br>
+<center>
+
+<div style="width:90%;height:920px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+
+<center>
+
+<br><H2 style="color:black;">REPLY THEM</style></H2><br>
+    
+    <center>
+      
+    <div style="width:80%;height:600px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+
+
+     <center>
+
+<div style="width:100%;height:750px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+<br>
+<center>
+
+<form  method="POST" enctype="multipart/form-data"  style="width:100%;padding:20px;" onSubmit="return checkvalid(this)">		
+
+ {% csrf_token %}
+ 
+ <table style="width:950px;color:black;" cellspacing="10" class="table">       
+{%for d in dat %}
+<tr>
+<td>YOUR MAIL ID  :</td>
+<td><input type="text" name="receiver" value="{{d.4}}" readonly></td>
+</tr>
+
+<tr>
+<td>SEND TO  :</td>
+<td><input type="text" name="sender" value="{{d.3}}" readonly></td>
+</tr>
+{% endfor %}
+<tr>
+<td>CHOOSE FILE TYPE :</td>
+<td><select name="file_type"> 
+    <option value="image" >IMAGE FILE</option>
+   <option value="document">DOCUMENT FILE / TEXT FILE</option>
+   <option value="video">VIDEO FILE</option>
+   <option value="audio">AUDIO FILE</option></td> 
+    </select></td>
+ 
+</tr>
+
+<tr>
+ <td style="padding:10px,0px;float:left;"><br>TYPE YOUR COMMENTS & MESSAGESS HERE..</td>
+ <td ><textarea name="msg" rows="10" cols="70" colspan="3" style="width:250px;height:150px;float:left;" ></textarea></td>
+</tr>
+
+<tr>
+<td>BROWSE YOUR FILE</td>
+<td><input type="file" accept="" onchange="preview_image(event)" name="fname" id="uploadimage"/></td>
+    
+</tr>
+
+<tr>
+<td></td>
+<td colspan="2"><img id="output_image" width="400" height="250"/></td>
+</tr>
+
+<tr>
+<td></td>
+<td><input type="submit" value="SEND REPLY" onclick="msg()"></td>
+</tr>
+
+
+            </table>
+            
+            
+        </form>
+
+</center>
+
+<script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+
+
+     
+</div>
+
+
+</center>
+
+   
+</div>
+
+</center>
+
+
+
+
+     
+    </div>
+
+   </center>
+
+   
+</div>
+
+</center>
+<!-- </div>
+
+</body>
+</html> -->
+
+{% endblock %}

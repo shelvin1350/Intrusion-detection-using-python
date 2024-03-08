@@ -1,0 +1,210 @@
+
+<!doctype html>
+<html lang="zxx">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="Reprise Responsive web template, Bootstrap Web Templates" />
+  <title>Safemail</title>
+  <link href="//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link href="//fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="/static/assets/css/style-starter.css">
+</head>
+<body>
+  <!-- header -->
+  <header id="site-header" class="header fixed-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg stroke">
+        <a class="navbar-brand mr-xl-5 mr-lg-3">
+          <span class="fa fa-black-tie"></span> Safemail
+        </a>
+        <!-- if logo is image enable this   
+      <a class="navbar-brand" href="#index.html">
+          <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+      </a> -->
+        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="padding-left: 500px;">
+          <ul class="navbar-nav mx-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/Home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Registration">Registration</a>
+            </li>
+          
+           
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/Attacks">Attacks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            
+        </ul>
+          </ul>
+        </div>
+       </nav>
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- banner-section -->
+  <section id="home" class="w3l-banner py-5">
+    <div class="container">
+      <div class="align-items-center">
+        <div class="bannerw3-content mt-lg-0 mt-4">
+          <span class="title-small">Hey there!</span>
+          <h3 class="mb-2 title">
+            <span> Looking for a <br>
+              method to sent and recieve mail securely without any intrusions.</span>
+          </h3>
+          <p class="mt-4 pr-lg-5">Nowadays there are many attacks which takes place in the form of attached documents with the emails. Here we scan all of the mails you sent and recieve. 
+            You can detect different types of intrusions from the attached mails. By this sent and recieve emails securely  
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //banner-section -->
+  <!--/w3l-index2-->
+  <!--//w3l-education-->
+  <!-- /testimonials-->
+  
+  <!-- //testimonials-->
+  <!-- Footers-14 -->
+  <footer class="w3l-footers-14 py-5">
+    <div class="container py-md-5 py-sm-3">
+     
+      <div class="row footers14-top no-gutters">
+        <div class="col-lg-6 footer14-nav-left">
+          <ul class="footer14-nav">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/Registration">Registration</a></li>
+            <li><a href="/Attacks">Attacks</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &uarr;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+
+  </footer>
+  <!-- Footers-14 -->
+  <!-- Template JavaScript -->
+  <script src="/static/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/static/assets/js/theme-change.js"></script>
+   <!--/carousel-->
+  <script src="/static/assets/js/owl.carousel.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#owl-demo1").owlCarousel({
+        loop: true,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          736: {
+            items: 1,
+            nav: false
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for tesimonials carousel slider -->
+  <!-- gallery popup js -->
+  <script src="/static/assets/js/smartphoto.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sm = new SmartPhoto(".js-img-viwer", {
+        showAnimation: false
+      });
+      // sm.destroy();
+    });
+  </script>
+  <!-- //gallery popup js -->
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+  <script src="/static/assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+
+
+{% extends 'head2_tail2.html' %}
+
+{% block edit_pswd %}
+
+<html>
+
+<script>
+     function printalert(form){
+		 debugger;
+		 
+         	alert("Password Updated Succesfully")
+
+	 }
+
+	</script>
+
+<!-- 
+<body><center>
+
+<div style="width:97%;margin:(0px,0px);padding:0px; height:650px;background-image: url(\\static\\bg1.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;"> -->
+
+<br><br>
+<center>
+
+<div style="width:90%;height:550px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+
+<center>
+
+<H2 style="color:black;"><br>Update your Profile
+<font color="white">..</font><img src="/static/new/editme.jpg" width="70px" height="70px">
+</style></H2>
+    
+    <center>
+
+  <div style="width:50%;height:400px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+<br>
+
+<form method=POST style="width:100%;padding:20px;">
+ {% csrf_token %} 
+     <center>
+      <table cellspacing="15px" style="color:black;" class="table">
+     <tr>
+     <td>Your current Password      :</td>
+     <td><input type="text" name="pswd" value="{{psw}}" readonly></td>
+     </tr>
+
+     <tr>
+     <td>Enter a New Password :</td>
+     <td><input type="password" class="form-control" name="npswd"></td>
+    </tr>
+    
+     <tr>
+    <td></td>
+    <td><input type="submit" value="update" onclick="return printalert(this)"></td>
+    </td>
+    </tr>
+
+
+    </table>   
+
+</form>   
+</div>
+</center>
+
+   
+</div>
+
+</center>
+</div>
+
+</center></body>
+</html>
+
+{% endblock %}

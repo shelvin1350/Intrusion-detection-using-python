@@ -1,0 +1,107 @@
+
+{% extends 'head2_tail2.html' %}
+
+{% block filecontent %}
+
+<!-- <html>
+<body><center>
+
+
+<div style="width:97%;margin:(0px,0px);padding:0px; height:650px;background-image: url(\\static\\bg3.gif);background-repeat:no-repeat;background-position:center;background-size:cover;"> -->
+
+<br><br>
+<center>
+
+<div style="width:90%;height:550px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+
+   <center><br><br> <H1 style="color:black;">HERE WE EXTRACTED YOUR FILE COMPONENTS.! </style></H1></center>
+
+            <center>
+      
+       <style type="text/css">
+	.TFtable{
+		width:100%; 
+		 
+	}
+	.TFtable td{ 
+		padding:1px; border:#4e95f4 1px solid;
+	}
+        .TFtable th{ 
+		padding:5px; border:turquoise 1px solid;
+                background:turquoise;
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+	.TFtable tr{
+		background: #b8d1f3;
+	}   
+        .TFtable th{ 
+		padding:7px; border:turquoise 1px solid;
+                background:turquoise;
+	}
+        /*  Define the background color for all the EVEN background rows  */
+	.TFtable tr:nth-child(even){
+		background: #dae5f4;
+	}
+</style>
+   <br><br>  
+        <table style="width:800px;color:black;" cellspacing="10" class="table">
+        {% for d in data %}
+         <tr>
+        <td>FILE NAME                 :</td>
+        <td><td>{{d.0}}</td></td>
+        </tr>
+
+        <tr>
+        <td>FILE TYPE                 :</td>
+        <td><td>{{d.1}}</td></td>
+        </tr>
+
+
+        <tr>
+        <td>DATE OF SENT              :</td>
+        <td><td>{{d.2}}</td></td>
+        </tr>
+        
+        <tr>
+        <td>YOUR MAIL ID              :</td>
+        <td><td>{{d.3}}</td></td>
+        </tr>
+
+        <tr>
+        <td>RECEIPIENTS MAIL ID       :</td>
+        <td><td>{{d.4}}</td></td>
+        </tr>
+
+        <tr>
+        <td>MESSAGE U HAVE SENT       :</td>
+        <td><td>{{d.5}}</td></td>
+        </tr>
+
+        <tr>
+        <td></td><td></td><td></td>
+        <td><a href="../threatlist?file_id={{d.0}}"><img src="/static/icons/download.png" width="90px" height="90px"></a></td>
+        </tr>
+
+         {% endfor %}
+         
+        </table>
+             
+
+    </div>
+  
+
+</center>
+<!-- </div>
+
+</center></body>
+</html> -->
+
+{% endblock %}
+
+
+    
+
+
+
+            </table>
+            

@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+   
+     <script type="text/javascript">
+            function PreviewImage(){
+                var oFReader = new FileReader();
+               
+            oFReader.readAsDataURL(document.getElementById("uploadimage").files[0]);
+
+            oFReader.onload = function (oFREvent) {
+                document.getElementById("uploadPreview").src = oFREvent.target.result;  //image display     
+               
+               
+               
+                
+                    };
+                
+                
+            };
+                        
+        </script>
+    
+    
+   </head>
+    <body>
+        
+         
+     
+       <div style="width: 100%;height: 700px;background-color: white">
+       
+           
+      
+           <center>
+       
+           <br>  <div style="width: 95%;height:650px;background:url(icons/imu.jpg);">
+           
+           <center>
+               <br>  <div style="width: 80%;height:600px;background-color: white">
+               
+               <br>    
+        
+        <br>
+        
+        <center>
+        
+            <h1>UPLOAD SUNGLASS IMAGE</h1>
+        
+        <br><br>
+        <form action="process/upload_sunglass_img_action.jsp" method="post" enctype="multipart/form-data">
+            
+            <table>
+                
+            <tr><td>UPLOAD IMAGE</td><td><input type="file" accept="image/*" name="fname" id="uploadimage" onchange="PreviewImage()"/></td></tr>
+            
+            <tr><td></td><td><img id="uploadPreview" width="500" height="300" /></td></tr>
+            
+            <tr><td></td></tr>
+             
+            <tr><td></td><td><input type="submit" value="upload"></td></tr>
+                
+                
+            
+            </table>
+            
+        </form>
+            
+        </center>
+               </div>
+            </center>
+          </div>
+         </center>
+</div>
+            
+     
+      
+       
+        
+    </body>
+</html>

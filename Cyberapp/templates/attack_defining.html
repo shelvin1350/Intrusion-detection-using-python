@@ -1,0 +1,133 @@
+
+{% extends 'head2_tail2.html' %}
+
+{% block attack_defining %}
+
+<!-- <html>
+<body><center>
+
+<div style="width:97%;margin:(0px,0px);padding:0px; height:880px;background-image: url(\\static\\bg3.gif);background-repeat:no-repeat;background-position:center;background-size:cover;"> -->
+
+<br><br>
+<center>
+
+<div style="width:90%;height:800px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+
+
+    <div style="width:60%;height:800px;background-color: white;float:left;background-position:center;background-repeat:no-repeat;">
+
+        <center>
+
+        <H2 style="color:black;"><br>Graphical Report of your Data
+        <!--<img src="/static/icons/mining.jpg" width="70px" height="70px">-->
+        </style></H2>
+            
+            <center>
+  
+
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+              <script type="text/javascript">
+
+                // Load the Visualization API and the corechart package.
+                google.charts.load('current', {'packages':['corechart']});
+
+                // Set a callback to run when the Google Visualization API is loaded.
+                google.charts.setOnLoadCallback(drawChart);
+
+                // Callback that creates and populates a data table,
+                // instantiates the pie chart, passes in the data and
+                // draws it.
+                function drawChart() {
+
+                  // Create the data table.
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('string', 'Topping');
+                  data.addColumn('number', 'Slices');
+                  data.addRows([
+                    ['{{typ1}}', {{atkc1}}],
+                    ['{{typ2}}', {{atkc2}}],
+                  
+                  ]);
+
+                  // Set chart options
+                  var options = {'title':'ATTACK AFFECTION DEPTH',
+                                'width':400,
+                                'height':300};
+
+                  // Instantiate and draw our chart, passing in some options.
+                  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                  chart.draw(data, options);
+                }
+              </script>
+          
+            <div id="chart_div"></div>
+
+
+                <!---  line char start-->
+
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <script type="text/javascript">
+                  google.charts.load('current', {'packages':['corechart']});
+                  google.charts.setOnLoadCallback(drawChart);
+
+                  function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                    ['Year', 'SAFE DATA','ATTACK AFFECTED DATA'],
+                  ["{{da}}",{{dc}},0],
+                  ["{{da1}}",{{dc1}},0],
+                  ["{{da2}}",0,{{dc1}}],
+                  ["{{da3}}",0,{{dc1}}],
+                    ]);
+
+                    var options = {
+                      title: 'ATTACK CHART',
+                      curveType: 'function',
+                      legend: { position: 'bottom' }
+                    };
+
+                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                    chart.draw(data, options);
+                  }
+                </script>
+
+                  <div id="curve_chart" style="width: 600px; height: 300px"></div>
+                      <!-- line chart end-->
+
+                  <script type='text/javascript'>
+                  function preview_image(event) 
+                  {
+                  var reader = new FileReader();
+                  reader.onload = function()
+                  {
+                    var output = document.getElementById('output_image');
+                    output.src = reader.result;
+                  }
+                  reader.readAsDataURL(event.target.files[0]);
+                  }
+                  </script>
+
+                  </div>
+    
+    <div style="width:40%;height:800px;background-color: white;float:left;background-position:center;background-repeat:no-repeat;">
+          
+
+
+
+
+
+    </div>
+
+
+    </center>
+                
+    </div>
+</div>
+
+</center>
+<!-- </div>
+
+</center></body>
+</html> -->
+
+{% endblock %}

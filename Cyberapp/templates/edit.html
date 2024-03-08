@@ -1,0 +1,70 @@
+
+{% extends 'head2_tail2.html' %}
+
+{% block edit %}
+
+<!-- <html>
+<body>
+
+<div style="width:97%;margin:(0px,0px);padding:0px; height:650px;background-image: url(\\static\\bg1.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;"> -->
+
+<br><br>
+<center>
+
+<div style="width:90%;height:550px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+
+<center>
+
+<H2 style="color:black;"><br>Update your Profile
+<font color="white">..</font><img src="/static/new/editme.jpg" width="70px" height="70px">
+</style></H2>
+    
+    <center>
+
+  <div style="width:50%;height:400px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+<br><br>
+
+<form method=GET style="width:100%;padding:20px;">
+ 
+     <center>
+      <table cellspacing="15px" style="color:black;" class="table">
+     <tr>
+     <td>FIRST NAME      :</td>
+     <td><input type="text" name="fn" value="{{fname}}"></td>
+     </tr>
+
+     <tr>
+     <td>SECOND NAME      :</td>
+     <td><input type="text" name="sn" value="{{sname}}"></td>
+     </tr>
+
+     <tr>
+     <td>EMAIL            :</td>
+     <td><input type="text" name="fn" value="{{mail}}"></td>
+     </tr>
+     <tr>
+     <td>PASSWORD      :</td>
+     <td><input type="text" name="fn" value="{{psw}}"></td>
+     </tr>
+
+    <tr>
+    <td>ENTER NEW ---:</td>
+    <td><input type="text" name="receiver"></td>
+    </tr>
+
+    </table>   
+
+</form>   
+</div>
+</center>
+
+   
+</div>
+
+</center>
+<!-- </div>
+
+</body>
+</html> -->
+
+{% endblock %}

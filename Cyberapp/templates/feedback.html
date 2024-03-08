@@ -1,0 +1,199 @@
+
+{% extends 'head2_tail2.html' %}
+
+{% block feedback %}
+
+<!-- <html>
+<body><center>
+
+<div style="width:97%;margin:(0px,0px);padding:0px; height:700px;background-image: url(\\static\\bg3.gif);background-repeat:no-repeat;background-position:center;background-size:cover;"> -->
+<br><br>
+
+<center>
+
+<div style="width:85%;height:610px;background-color: white;float:center;background-position:center;background-repeat:no-repeat;">
+
+
+<div style="width:35%;height:610px;background-color: white;float:left;background-position:center;background-repeat:no-repeat;">
+
+<center>
+
+<br><br><br>
+
+<img src="static/gifs/rrd.gif" alt="" width="500" height="400" border="0">
+
+
+</div>
+
+<div style="width:65%;height:610px;background-color: white;float:left;background-position:center;background-repeat:no-repeat;">
+
+<br><center> <H1 style="color:black;">Provide Your Feedbacks Below</style></H1></center>
+
+<form  method="POST" enctype="multipart/form-data"  style="width:100%;padding:5px;">		
+{% csrf_token %}
+ 
+<center>
+          
+<table style="width:750px" cellspacing="15" class="table">       
+
+<tr>
+<td>YOUR NAME PLEASE:</td>
+<td><input type="text" name="n1"></td>
+</tr>
+
+<tr>
+<td>Email:</td>
+<td><input type="email" name="mail"></td>
+
+
+</tr>
+
+<tr>
+<td>
+        Tell us about your overall experience?
+</td>
+
+   <br>
+    <td>
+            <input type="radio" name="experience" id="radio_experience" value="bad" >
+            
+            Bad
+             <input type="radio" name="experience" id="radio_experience" value="average" >
+            Average
+            <input type="radio" name="experience" id="radio_experience" value="good" >
+            Good
+    </td><br>
+</tr>
+
+<tr>
+<td>
+        Rate our Services
+</td>
+
+   <br>
+    <td>
+        {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% endcomment %}
+
+       {% comment %} <span class="fa fa-star checked" value="1" name="s1" id="s1" ></span>
+        <span class="fa fa-star checked" value="2" name="s2"  id="s1"></span>
+        <span class="fa fa-star checked" value="3" name="s3" id="s1"></span>
+        <span class="fa fa-star checked" value="4" name="s4" id="s1"></span>
+        <span class="fa fa-star checked" value="5" name="s5" id="s1"></span> {% endcomment %}
+<style>
+form .stars {
+  background: url("stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+}
+
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("\\static\\stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+
+</style>
+<div class="stars">
+		<input type="radio" name="star" value="1" class="star-1" id="star-1" />
+		<label class="star-1" for="star-1">1</label>
+		<input type="radio" name="star" class="star-2" value="2" id="star-2" />
+		<label class="star-2" for="star-2">2</label>
+		<input type="radio" name="star" class="star-3" value="3" id="star-3" />
+		<label class="star-3" for="star-3">3</label>
+		<input type="radio" name="star" class="star-4" value="4" id="star-4" />
+		<label class="star-4" for="star-4">4</label>
+		<input type="radio" name="star" class="star-5" value="5" id="star-5" />
+		<label class="star-5" for="star-5">5</label>
+		<span></span>
+	</div>
+        
+
+    </td><br>
+</tr>
+
+ <tr>
+ <td style="padding:10px,0px;float:left;">TYPE YOUR COMMENTS...<br></td>
+ <td ><textarea name="msg" rows="10" cols="70" colspan="3" style="width:250px;height:150px;float:left;" ></textarea></td>
+ </tr>
+
+<tr>
+    <td><td><center><input type="submit" value="post"></center></td></td>
+</tr>
+    
+                
+            
+            </table>
+            </center>
+            
+        </form>
+
+
+</div>
+</center>
+</div>
+<!-- </div>
+
+</center></body>
+</html> -->
+
+{% endblock %}
